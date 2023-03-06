@@ -28,5 +28,23 @@ jobs:
         
       - name: update website source code
         run: python indexBuilder.py
+
+      - name: switching from HTTPS to SSH
+        run: git remote set-url origin ${{ secrets.ssh }}
+
+      - name: check for changes
+        run: git status
+
+      - name: stage changed files
+        run: git add .
+
+      - name: commit changed files
+        run: git commit -m "Auto updating TODO.txt"
+
+      - name: fetch from main
+        run: git fetch origin main
+
+      - name: push code to main
+        run: git push origin HEAD:main
         
           
