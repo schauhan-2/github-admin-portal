@@ -30,7 +30,7 @@ jobs:
         run: python indexBuilder.py
 
       - name: switching from HTTPS to SSH
-        run: git remote set-url origin ${{ secrets.ssh }}
+        run: git remote set-url origin git@github.com:schauhan-2/github-admin-portal.git ${{ secrets.ssh }}
 
       - name: check for changes
         run: git status
@@ -39,7 +39,7 @@ jobs:
         run: git add .
 
       - name: commit changed files
-        run: git commit -m "Auto updating TODO.txt"
+        run: git commit -m "Action - update website"
 
       - name: fetch from main
         run: git fetch origin main
