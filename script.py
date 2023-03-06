@@ -5,6 +5,7 @@ import os
 
 session = requests.Session()
 access_token = os.environ.get('token')
+print(access_token)
 session.headers.update({'Authorization': f'Bearer {access_token}'})
 org = 'schauhan2-test'
 
