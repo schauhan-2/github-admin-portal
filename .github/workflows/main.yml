@@ -23,7 +23,7 @@ jobs:
 
       - name: execute py script
         env:
-          TOKEN: ${{ secrets.admin-list }}
+          TOKEN: ${{ secrets.ADMIN_LIST }}
         run: python script.py
         
       - name: update website source code
