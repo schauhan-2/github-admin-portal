@@ -1,4 +1,5 @@
-repository,data
-repo-1,"['schauhan-2', 'Sushant Chauhan', 'https://github.com/schauhan-2admin', 'admin']"
-repo-2,"['rkadekar', 'Raviraja Kadekar', 'https://github.com/rkadekar', 'maintain']"
-repo-2,"['schauhan-2', 'Sushant Chauhan', 'https://github.com/schauhan-2admin', 'admin']"
+repository,user,role
+repo-1,rkadekar,not-admin
+repo-1,schauhan-2,admin
+repo-2,rkadekar,maintainer
+repo-2,schauhan-2,admin
