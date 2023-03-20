@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Github Admin Portal</title>
+    <title>Github Admins/Maintainers</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
   </head>
-  <body>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+  <body onload="setProfiles()">
+    <header>
+      <h1 id="heading"> Infoblox-CTO Admins/Maintainers</h1>
+      <spam id="syncTime">
+        Last Synced : 02:00 AM UTC
+      </spam>
+    </header>
+    <input type="text" id="input" onkeyup="getRepos()" placeholder="Start entering repository...">
+    <table id="repoTable">
+      <thead>
+        <tr>
+          <th>Repositories</th>
+          <th>Admins/Maintainers</th>
+        </tr>
+      </thead>
+      <tbody>
+      

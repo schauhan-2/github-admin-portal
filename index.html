@@ -4,36 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Github Admin Portal</title>
+    <title>Github Admins/Maintainers</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
   </head>
-  <body>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">   <table id="myTable">
-        <tr class="header">
-          <th style="width:60%;">Repo Name</th>
-          <th style="width:40%;">User</th>
-          <th style="width:40%;">Role</th>
-        </tr>   <tr>
+  <body onload="setProfiles()">
+    <header>
+      <h1 id="heading"> Infoblox-CTO Admins/Maintainers</h1>
+      <spam id="syncTime">
+        Last Synced : 02:00 AM UTC
+      </spam>
+    </header>
+    <input type="text" id="input" onkeyup="getRepos()" placeholder="Start entering repository...">
+    <table id="repoTable">
+      <thead>
+        <tr>
+          <th>Repositories</th>
+          <th>Admins/Maintainers</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
           <td>repo-1</td>
-          <td>rkadekar</td>
-          <td>not-admin
-</td>
-        </tr>   <tr>
-          <td>repo-1</td>
-          <td>schauhan-2</td>
-          <td>admin
-</td>
-        </tr>   <tr>
+          
+      <td>
+        
+        <button class=adminUser>
+            Sushant Chauhan
+        </button>
+        
+      </td>
+    </tr>
+       <tr>
           <td>repo-2</td>
-          <td>rkadekar</td>
-          <td>maintainer
-</td>
-        </tr>   <tr>
-          <td>repo-2</td>
-          <td>schauhan-2</td>
-          <td>admin
-</td>
-        </tr></table>
+          
+      <td>
+        
+        <button class=maintainUser>
+            Raviraja Kadekar
+        </button>
+        
+        <button class=adminUser>
+            Sushant Chauhan
+        </button>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+    </table>
+    <footer>
+      <a href="https://infoblox.atlassian.net/secure/CreateIssue.jspa?pid=10019">missing info</a>
+      <spam>
+        Maintained by team DEVEOPS SRE.
+      </spam>
+    </footer>
   </body>
 </html>
