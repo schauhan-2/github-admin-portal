@@ -36,10 +36,13 @@ htmlFile.write('''
   </tbody>
     </table>
     <footer>
-      <a href="https://infoblox.atlassian.net/secure/CreateIssue.jspa?pid=10019">missing info</a>
-      <spam>
-        Maintained by team DEVOPS SRE.
-      </spam>
+      <div id="footerDiv">
+        <a href="https://infoblox.atlassian.net/secure/CreateIssue.jspa?pid=10019">missing info</a>
+        <br>
+        <p>
+          Maintained by team DEVOPS SRE.
+        </p>
+      </div>
     </footer>
   </body>
 </html>''')

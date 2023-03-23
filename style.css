@@ -23,8 +23,21 @@ header {
 footer {
   display:flex;
   flex-direction: row;
+  align-items: center;
+  text-align: center;
   background-color: rgb(215, 215, 215);
   padding: 2px, 3px, 3px, 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:100px;
+}
+
+#footerDiv {
+  position: absolute;
+  left: 550px;
+  align-self: center;
 }
 
 #right-panel {
