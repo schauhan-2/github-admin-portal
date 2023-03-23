@@ -4,8 +4,8 @@ import csv
 import os
 
 session = requests.Session()
-#access_token = os.environ.get('TOKEN')
-access_token = os.environ.get('github')
+access_token = os.environ.get('TOKEN')
+#access_token = os.environ.get('github')
 session.headers.update({'Authorization': f'Bearer {access_token}'})
 org = 'schauhan2-test'
 
