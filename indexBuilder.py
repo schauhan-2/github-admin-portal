@@ -20,8 +20,9 @@ for ind in csvFile.index:
         else:
             role = 'maintainUser'
         buttonString += f'''
-        <button class={role}>
-            {users[1]}
+        <button class={role} onclick="copyToClipboard('{users[1]}')">
+            {users[1]} 
+            <img src="data/adminCopyLogo.svg" />
         </button>
         '''
     htmlFile.write(f'''
@@ -34,7 +35,6 @@ for ind in csvFile.index:
 htmlFile.write('''
   </tbody>
     </table>
-    </script>
     <footer>
       <a href="https://infoblox.atlassian.net/secure/CreateIssue.jspa?pid=10019">missing info</a>
       <spam>

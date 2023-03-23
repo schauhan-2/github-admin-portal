@@ -18,20 +18,25 @@ function getRepos() {
   }
 }
 
-function setProfiles() {
-  var adminClass = document.getElementsByClassName("adminUser");
-  var maintainClass = document.getElementsByClassName("maintainUser");
-  var i;
-  for (i = 0; i < adminClass.length; i++) {
-    adminClass[i].addEventListener("click", function() {
-      navigator.clipboard.writeText(this.innerText);
-      alert("Name copied. You can now search " + this.innerText + " on slack.");
-    });
-  }
-  for (i = 0; i < maintainClass.length; i++) {
-    maintainClass[i].addEventListener("click", function() {
-      navigator.clipboard.writeText(this.innerText);
-      alert("Name copied. You can now search " + this.innerText + " on slack.");
-    });
-  }
+function copyToClipboard(name) {
+  navigator.clipboard.writeText(name);
+  alert("Name copied. You can now search " + name + " on slack.");
 }
+
+function showSteps() {
+  stepsBox = document.getElementById("steps");
+  overlayFlex = document.getElementById("hidden-flex");
+  
+  stepsBox.style.display = "flex";
+  overlayFlex.style.display = "flex";
+
+}
+
+function hideSteps() {
+  stepsBox = document.getElementById("steps");
+  overlayFlex = document.getElementById("hidden-flex");
+
+  stepsBox.style.display = "none";
+  overlayFlex.style.display = "none";
+}
+  
